@@ -1,11 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
+import type { Database } from "@/integrations/supabase/types";
 
-export type Todo = {
-  id: string;
-  task: string;
-  is_completed: boolean;
-  created_at: string;
-};
+export type Todo = Database['public']['Tables']['todos']['Row'];
 
 export async function fetchTodos() {
   const { data, error } = await supabase
