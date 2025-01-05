@@ -25,9 +25,9 @@ export const AddTodo = ({ onAdd }: AddTodoProps) => {
         value={task}
         onChange={(e) => setTask(e.target.value)}
         placeholder="Add a new todo..."
-        className="flex-1"
+        className="flex-1 bg-background/50 backdrop-blur-sm border-border"
       />
-      <Button type="submit" className="bg-blue-600 hover:bg-blue-700">
+      <Button type="submit" className="bg-primary hover:bg-primary/90">
         <Plus size={20} className="mr-2" /> Add
       </Button>
     </form>
