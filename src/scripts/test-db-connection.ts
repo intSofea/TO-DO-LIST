@@ -1,6 +1,6 @@
 import { testConnection } from '../config/database.js'
 
-async function main() {
+const main = async () => {
   console.log('Testing database connection...')
   const isConnected = await testConnection()
   
