@@ -11,22 +11,34 @@ export type Database = {
     Tables: {
       todos: {
         Row: {
-          created_at: string
+          created_at: string | null
+          description: string | null
+          due_date: string | null
           id: string
           is_completed: boolean | null
+          priority: number | null
           task: string
+          updated_at: string | null
         }
         Insert: {
-          created_at?: string
+          created_at?: string | null
+          description?: string | null
+          due_date?: string | null
           id?: string
           is_completed?: boolean | null
+          priority?: number | null
           task: string
+          updated_at?: string | null
         }
         Update: {
-          created_at?: string
+          created_at?: string | null
+          description?: string | null
+          due_date?: string | null
           id?: string
           is_completed?: boolean | null
+          priority?: number | null
           task?: string
+          updated_at?: string | null
         }
         Relationships: []
       }

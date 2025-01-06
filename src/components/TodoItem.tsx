@@ -24,14 +24,21 @@ export const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => {
         >
           {todo.is_completed ? <Check size={16} /> : <X size={16} />}
         </Button>
-        <span
-          className={cn(
-            "text-foreground",
-            todo.is_completed && "line-through text-muted-foreground"
+        <div className="flex flex-col">
+          <span
+            className={cn(
+              "text-foreground",
+              todo.is_completed && "line-through text-muted-foreground"
+            )}
+          >
+            {todo.task}
+          </span>
+          {todo.description && (
+            <span className="text-sm text-muted-foreground">
+              {todo.description}
+            </span>
           )}
-        >
-          {todo.task}
-        </span>
+        </div>
       </div>
       <Button
         variant="ghost"
