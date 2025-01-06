@@ -1,4 +1,4 @@
-import { testConnection } from '../config/database'
+import { testConnection } from '../config/database.js'
 
 async function main() {
   console.log('Testing database connection...')
